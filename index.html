@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nico’s Kaffebar på Østerbro. God kaffe, friskbagt brød og plads til hverdagens små pauser. Se vores menu og find vej.">
+    <meta name="theme-color" content="#293f34">
+    <title>Nico’s Kaffebar · God kaffe. Gode stunder.</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#hovedindhold">Spring til indhold</a>
+
+    <!-- Header og navigation -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="#hjem" aria-label="Nico’s Kaffebar – til forsiden">
+                <span class="brand-name">nico’s<span class="brand-dot">.</span></span>
+                <span class="brand-caption">KAFFEBAR · ØSTERBRO</span>
+            </a>
+            <nav class="navigation" aria-label="Hovednavigation">
+                <a href="#om-os">Om os</a>
+                <a href="#menu">Menu</a>
+                <a href="#galleri">Stemningen</a>
+                <a class="navigation-visit" href="#kontakt">Kig forbi <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="hovedindhold">
+        <!-- Hero: velkommen til Nico’s -->
+        <section class="hero container" id="hjem" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span> Din lille pause på Østerbro</p>
+                <h1 id="hero-heading">God kaffe.<br>Gode stunder<span class="text-accent">.</span></h1>
+                <p class="hero-description">En kop, der varmer. Et sted, du har lyst til at blive. Hos Nico’s er der plads til både hverdagens små pauser og de lange samtaler.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#menu">Find din favorit <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#kontakt">Find vej til os <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-note">
+                    <span class="coffee-symbol" aria-hidden="true">☕</span>
+                    <p>Kaffe med omtanke.<br><span>Og altid plads til én mere.</span></p>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img class="hero-image" src="images/latte_art.jpeg" alt="Billedpladsholder: en varm kop kaffe med lattekunst på et træbord" width="1000" height="1100" fetchpriority="high">
+                <div class="hero-stamp" aria-hidden="true">
+                    <span>BRYGGET MED</span>
+                    <strong>lidt ekstra<br>kærlighed</strong>
+                    <span>SERVERET HOS NICO’S</span>
+                </div>
+                <p class="image-caption">KAFFE. NÆRVÆR. LIDT MERE RO.</p>
+            </div>
+        </section>
+
+        <!-- Præsentation af kaffebaren -->
+        <section class="about section-space" id="om-os" aria-labelledby="about-heading">
+            <div class="container about-layout">
+                <div class="about-visual">
+                    <img src="https://placehold.co/1000x850/b8b9a6/303e32?text=Et+sted+at+lande" alt="Billedpladsholder: kaffebarens hyggelige vinduespladser med planter og små borde" width="1000" height="850" loading="lazy">
+                    <span class="photo-label">Dit nye stamsted, måske?</span>
+                </div>
+                <div class="about-content">
+                    <p class="eyebrow">Lille kaffebar. Stor hjertevarme.</p>
+                    <h2 id="about-heading">Midt i byen.<br>Helt ned i gear.</h2>
+                    <p>Nico’s er en lille, uformel kaffebar på Østerbro med en stor kærlighed til god kaffe. Her mødes du af duften af friskmalede bønner, lune croissanter og et smil bag disken.</p>
+                    <p>Tag din bog med, slå computeren op, eller kom forbi med en ven. Vi har rolige hjørner, fællesborde og tid til at gøre din kaffe, som du kan lide den.</p>
+                    <a class="text-link" href="#kontakt">Vi gemmer en plads til dig <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu med seks produkter og priser -->
+        <section class="menu section-space container" id="menu" aria-labelledby="menu-heading">
+            <div class="section-heading menu-heading">
+                <div>
+                    <p class="eyebrow">Noget godt i koppen. Og til den.</p>
+                    <h2 id="menu-heading">Små hverdagsfavoritter.</h2>
+                </div>
+                <p>Fra den første espresso til den sidste krumme.<br>En enkel menu, lavet med omhu.</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Espresso</h3><span class="menu-price">28 kr.</span></div>
+                    <p>Et dobbelt shot med fylde, sødme og noter af mørk chokolade.</p>
+                    <span class="menu-category">DEN LILLE, INTENSE</span>
+                </article>
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Cappuccino</h3><span class="menu-price">40 kr.</span></div>
+                    <p>Espresso og silkeblødt mælkeskum i en varm, rund balance.</p>
+                    <span class="menu-category">EN KLASSIKER</span>
+                </article>
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Caffè latte</h3><span class="menu-price">44 kr.</span></div>
+                    <p>Dobbelt espresso med masser af cremet, varm mælk.</p>
+                    <span class="menu-category">TIL DEN LANGE PAUSE</span>
+                </article>
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Islatte</h3><span class="menu-price">46 kr.</span></div>
+                    <p>Friskbrygget espresso, kold mælk og is. Enkel og forfriskende.</p>
+                    <span class="menu-category">GOD PÅ IS</span>
+                </article>
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Smørcroissant</h3><span class="menu-price">30 kr.</span></div>
+                    <p>Gylden og sprød udenpå, luftig indeni. Bagt frisk hver morgen.</p>
+                    <span class="menu-category">FRA MORGENSTUNDEN</span>
+                </article>
+                <article class="menu-card">
+                    <div class="menu-card-heading"><h3>Kardemommesnurre</h3><span class="menu-price">34 kr.</span></div>
+                    <p>Blød gærdej, smør og duftende kardemomme. Svær at dele.</p>
+                    <span class="menu-category">DET SØDE PUNKTUM</span>
+                </article>
+            </div>
+            <p class="menu-note">Din kaffe, på din måde. Vælg havredrik for +5 kr. <span>Spørg os gerne om allergener.</span></p>
+        </section>
+
+        <!-- Tre grunde til at vælge Nico’s -->
+        <section class="reasons section-space" aria-labelledby="reasons-heading">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Det er de små ting</p>
+                    <h2 id="reasons-heading">Mere end en god kop kaffe.</h2>
+                </div>
+                <div class="reasons-grid">
+                    <article class="reason">
+                        <span class="reason-number" aria-hidden="true">01 /</span>
+                        <h3>Omhu i hver kop</h3>
+                        <p>Vi vælger bønner med karakter og justerer kværnen hver morgen. Du skal kunne smage, at vi gør os umage.</p>
+                    </article>
+                    <article class="reason">
+                        <span class="reason-number" aria-hidden="true">02 /</span>
+                        <h3>Plads til din hverdag</h3>
+                        <p>Gratis wi-fi, stikkontakter og en rolig plads til din computer. Eller bare et blødt hjørne, hvor du kan være offline.</p>
+                    </article>
+                    <article class="reason">
+                        <span class="reason-number" aria-hidden="true">03 /</span>
+                        <h3>Et lokalt mødested</h3>
+                        <p>Her er du velkommen, uanset om du kender alle eller kommer for første gang. Kom, som du er. Bliv lidt længere.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galleri med glimt af stemningen -->
+        <section class="gallery section-space container" id="galleri" aria-labelledby="gallery-heading">
+            <div class="section-heading gallery-heading">
+                <div>
+                    <p class="eyebrow">Et lille kig indenfor</p>
+                    <h2 id="gallery-heading">Her føles hverdagen lidt rarere.</h2>
+                </div>
+                <p>Find din yndlingsplads.</p>
+            </div>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="https://placehold.co/700x900/b4a18a/3d342c?text=Kaffe+med+omhu" alt="Billedpladsholder: en barista hælder mælk i en friskbrygget cappuccino" width="700" height="900" loading="lazy">
+                    <figcaption>Et lille øjeblik af kaffelykke.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://placehold.co/700x900/d4b99c/47392b?text=Lidt+til+den+s%C3%B8de+tand" alt="Billedpladsholder: gyldne croissanter og kardemommesnurrer på kaffebarens disk" width="700" height="900" loading="lazy">
+                    <figcaption>Friskbagt. Hver eneste morgen.</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="https://placehold.co/700x900/9ba58e/293b2b?text=Plads+til+gode+stunder" alt="Billedpladsholder: et lyst caféhjørne med grønne planter og plads til venner" width="700" height="900" loading="lazy">
+                    <figcaption>En god plads og godt selskab.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Kundeanmeldelser med tydeligt markeret eksempelindhold -->
+        <section class="reviews section-space" aria-labelledby="reviews-heading">
+            <div class="container">
+                <div class="section-heading reviews-heading">
+                    <p class="eyebrow">Ord fra den anden side af disken</p>
+                    <h2 id="reviews-heading">Det bedste ved Nico’s? Gæsterne.</h2>
+                    <p>Eksempler på gæsteanmeldelser til denne præsentationsside.</p>
+                </div>
+                <div class="reviews-grid">
+                    <article class="review" aria-label="Eksempel på anmeldelse fra Sofie">
+                        <span class="review-stars" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <blockquote><p>“Min yndlingsplads til en rolig formiddag med computeren. Kaffen er god, og der er altid en rar stemning.”</p></blockquote>
+                        <p class="review-author">Sofie M.<span>Kaffe og en arbejdsstund</span></p>
+                    </article>
+                    <article class="review" aria-label="Eksempel på anmeldelse fra Jonas">
+                        <span class="review-stars" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <blockquote><p>“Vi kom for en hurtig kop kaffe og blev i to timer. Den slags sted, man har lyst til at komme tilbage til.”</p></blockquote>
+                        <p class="review-author">Jonas L.<span>En kop med en ven</span></p>
+                    </article>
+                    <article class="review" aria-label="Eksempel på anmeldelse fra Amalie">
+                        <span class="review-stars" aria-label="5 ud af 5 stjerner">★★★★★</span>
+                        <blockquote><p>“En cappuccino og en lun kardemommesnurre ved vinduet. Så behøver en lørdag faktisk ikke mere.”</p></blockquote>
+                        <p class="review-author">Amalie K.<span>En langsom lørdag</span></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt, adresse og åbningstider -->
+        <section class="contact section-space container" id="kontakt" aria-labelledby="contact-heading">
+            <div class="contact-intro">
+                <p class="eyebrow">Vi sætter kaffen over</p>
+                <h2 id="contact-heading">Din næste pause<br>er lige om hjørnet<span class="text-accent">.</span></h2>
+                <p>Kom forbi til en hurtig espresso på farten eller slå dig ned en hel eftermiddag. Vi glæder os til at se dig.</p>
+                <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Willemoesgade+18+2100+K%C3%B8benhavn" target="_blank" rel="noopener noreferrer">Find vej i Google Maps <span aria-hidden="true">↗</span><span class="visually-hidden"> (åbner i en ny fane)</span></a>
+            </div>
+            <div class="contact-details">
+                <div class="contact-address">
+                    <h3>Find os her</h3>
+                    <address>Nico’s Kaffebar<br>Willemoesgade 18<br>2100 København Ø</address>
+                </div>
+                <div class="contact-hours">
+                    <h3>Åbningstider</h3>
+                    <dl class="opening-hours">
+                        <div><dt>Mandag – fredag</dt><dd>07.30 – 18.00</dd></div>
+                        <div><dt>Lørdag</dt><dd>09.00 – 17.00</dd></div>
+                        <div><dt>Søndag</dt><dd>09.00 – 16.00</dd></div>
+                    </dl>
+                </div>
+                <div class="contact-links">
+                    <h3>Sig hej</h3>
+                    <a href="tel:+4532456789">+45 32 45 67 89</a>
+                    <a href="mailto:hej@nicoskaffebar.example">hej@nicoskaffebar.example</a>
+                </div>
+                <p class="contact-note">Adresse, åbningstider og kontaktoplysninger er eksempler og skal erstattes inden offentliggørelse.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer med copyright og sociale medier -->
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div>
+                <a class="brand footer-brand" href="#hjem" aria-label="Nico’s Kaffebar – tilbage til toppen"><span class="brand-name">nico’s.</span><span class="brand-caption">KAFFEBAR · ØSTERBRO</span></a>
+                <p>God kaffe. Gode stunder. Vi ses hos Nico’s.</p>
+            </div>
+            <nav class="social-links" aria-label="Sociale medier – eksempellinks">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span><span class="visually-hidden"> (eksempellink, åbner i en ny fane)</span></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span><span class="visually-hidden"> (eksempellink, åbner i en ny fane)</span></a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Nico’s Kaffebar. Alle rettigheder forbeholdes.</p>
+            <p>Præsentationsdemo · Billeder fra placehold.co · Sociale links er eksempler.</p>
+        </div>
+    </footer>
+</body>
+</html>
