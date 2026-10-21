@@ -1,0 +1,819 @@
+/* Designvariabler: varme jordfarver og fælles afstande. */
+:root {
+    color-scheme: light;
+    --color-cream: #f8f6ef;
+    --color-white: #fffdf8;
+    --color-sand: #eee9dd;
+    --color-green: #293f34;
+    --color-green-light: #dfe6d9;
+    --color-brown: #825c3d;
+    --color-text: #2b332c;
+    --color-muted: #62675c;
+    --color-border: #d8d6c9;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4.5rem;
+    --space-section: clamp(4rem, 8vw, 7rem);
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.5rem;
+    --container-width: 76rem;
+}
+
+/* Grundlayoutet er mobile-first. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--space-lg);
+}
+
+body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-text);
+    font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+::selection {
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+
+h1, h2, h3, p, figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.12;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(2.75rem, 6.3vw, 5.75rem);
+    letter-spacing: -0.065em;
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    letter-spacing: -0.05em;
+}
+
+h3 {
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+}
+
+a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--color-brown);
+    outline-offset: 6px;
+    border-radius: 0.2rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: var(--color-sand);
+}
+
+.container {
+    width: min(calc(100% - 2.5rem), var(--container-width));
+    margin-inline: auto;
+}
+
+.section-space {
+    padding-block: var(--space-section);
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+    color: var(--color-green);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.text-accent {
+    color: var(--color-brown);
+}
+
+.small-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-brown);
+}
+
+.section-heading {
+    margin-bottom: var(--space-xl);
+}
+
+.section-heading > p:last-child:not(.eyebrow) {
+    margin-top: var(--space-sm);
+    color: var(--color-muted);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    min-height: 3.4rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 0.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 180ms ease;
+}
+
+.button-primary {
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+.button-primary:hover {
+    background: #3d5647;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-height: 2.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.text-link:hover {
+    color: var(--color-brown);
+}
+
+/* Hjælp til tastaturnavigation og skærmlæsere. */
+.visually-hidden, .skip-link:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    z-index: 10;
+    padding: var(--space-sm);
+    background: var(--color-white);
+}
+
+/* Header: navigationen er synlig på alle skærmstørrelser. */
+.site-header {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding-block: var(--space-md);
+}
+
+.brand {
+    display: inline-flex;
+    flex-direction: column;
+    width: fit-content;
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 2.9rem;
+    font-weight: 750;
+    letter-spacing: -0.085em;
+    line-height: 1;
+}
+
+.brand-dot {
+    color: var(--color-brown);
+}
+
+.brand-caption {
+    margin-top: var(--space-xs);
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: var(--space-sm);
+}
+
+.navigation a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    min-height: 2.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: var(--color-brown);
+    text-decoration: underline;
+}
+
+/* Hero med stort billedfelt og dekorativt kaffestempel. */
+.hero {
+    display: grid;
+    gap: var(--space-xl);
+    padding-block: var(--space-xl) var(--space-section);
+}
+
+.hero-content {
+    align-self: center;
+    min-width: 0;
+}
+
+.hero-description {
+    max-width: 29rem;
+    margin-top: var(--space-md);
+    color: var(--color-muted);
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.hero-note p > span {
+    color: var(--color-muted);
+}
+
+.coffee-symbol {
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.hero-visual {
+    position: relative;
+    min-width: 0;
+}
+
+.hero-image {
+    aspect-ratio: 1 / 1.05;
+    border-radius: 8rem 8rem var(--radius-lg) var(--radius-lg);
+}
+
+.hero-stamp {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid var(--color-cream);
+    border-radius: 50%;
+    background: var(--color-green);
+    color: var(--color-cream);
+    text-align: center;
+    transform: rotate(9deg);
+}
+
+.hero-stamp span {
+    font-size: 0.44rem;
+    letter-spacing: 0.13em;
+}
+
+.hero-stamp strong {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.image-caption {
+    margin-top: var(--space-sm);
+    color: var(--color-muted);
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+    text-align: right;
+}
+
+/* Præsentation af kaffebaren. */
+.about {
+    background: var(--color-sand);
+}
+
+.about-layout {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.about-visual {
+    position: relative;
+}
+
+.about-visual img {
+    aspect-ratio: 1.15;
+    border-radius: var(--radius-lg);
+}
+
+.photo-label {
+    position: absolute;
+    bottom: var(--space-sm);
+    left: var(--space-sm);
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    background: var(--color-cream);
+    font-size: 0.75rem;
+    transform: rotate(-3deg);
+}
+
+.about-content > p:not(.eyebrow) {
+    margin-top: var(--space-md);
+    color: var(--color-muted);
+}
+
+.about-content .text-link {
+    margin-top: var(--space-md);
+}
+
+/* Menu: produkt og pris står sammen i læserækkefølgen. */
+.menu-grid {
+    display: grid;
+    gap: var(--space-sm) var(--space-lg);
+}
+
+.menu-card {
+    padding-block: var(--space-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.menu-card-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+}
+
+.menu-card-heading h3 {
+    overflow-wrap: anywhere;
+}
+
+.menu-price {
+    flex-shrink: 0;
+    color: var(--color-green);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.menu-card > p {
+    max-width: 25rem;
+    margin-top: var(--space-sm);
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.menu-category {
+    display: block;
+    margin-top: var(--space-md);
+    color: var(--color-brown);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.menu-note {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.8rem;
+}
+
+.menu-note span {
+    display: block;
+}
+
+/* Tre grunde i en mørkegrøn sektion. */
+.reasons {
+    background: var(--color-green);
+    color: var(--color-cream);
+}
+
+.reasons .eyebrow {
+    color: #c1ceb7;
+}
+
+.reasons-grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.reason {
+    padding-top: var(--space-md);
+    border-top: 1px solid #647569;
+}
+
+.reason-number {
+    color: #c1ceb7;
+    font-size: 0.8rem;
+}
+
+.reason h3 {
+    margin-block: var(--space-md) var(--space-sm);
+    font-size: 1.4rem;
+}
+
+.reason p {
+    max-width: 29rem;
+    color: #d2dace;
+    font-size: 0.95rem;
+}
+
+/* Galleri: faste billedforhold begrænser layoutskift ved indlæsning. */
+.gallery-grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.gallery-item img {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+}
+
+.gallery-item figcaption {
+    margin-top: 0.8rem;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+}
+
+/* Kundeanmeldelser. */
+.reviews {
+    background: var(--color-sand);
+}
+
+.reviews-heading {
+    text-align: center;
+}
+
+.reviews-heading .eyebrow {
+    justify-content: center;
+}
+
+.reviews-heading > p:last-child {
+    font-size: 0.8rem;
+}
+
+.reviews-grid {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+}
+
+.review-stars {
+    color: var(--color-brown);
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+}
+
+.review blockquote {
+    flex-grow: 1;
+    margin-block: var(--space-md) var(--space-lg);
+}
+
+.review-author {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.review-author span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--color-muted);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* Kontakt og åbningstider. */
+.contact {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.contact-intro > p:not(.eyebrow) {
+    max-width: 29rem;
+    margin-block: var(--space-md) var(--space-lg);
+    color: var(--color-muted);
+}
+
+.contact-details {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    background: var(--color-green-light);
+}
+
+.contact-details h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 0.95rem;
+}
+
+.contact-details address, .opening-hours, .contact-links a {
+    font-size: 0.9rem;
+    font-style: normal;
+}
+
+.opening-hours > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding-block: 0.25rem;
+}
+
+.opening-hours dd {
+    flex-shrink: 0;
+}
+
+.contact-links {
+    min-width: 0;
+}
+
+.contact-links a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 2.75rem;
+    padding-block: 0.4rem;
+    overflow-wrap: anywhere;
+}
+
+.contact-note {
+    padding-top: var(--space-sm);
+    border-top: 1px solid #b6c2ae;
+    color: #515e4d;
+    font-size: 0.7rem;
+}
+
+/* Footer. */
+.site-footer {
+    padding-top: var(--space-xl);
+    background: var(--color-green);
+    color: var(--color-cream);
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-xl);
+}
+
+.footer-brand {
+    color: var(--color-cream);
+}
+
+.footer-main p {
+    margin-top: var(--space-md);
+    color: #d2dace;
+    font-size: 0.85rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    min-height: 2.75rem;
+    font-size: 0.85rem;
+}
+
+.site-footer a:focus-visible {
+    outline-color: var(--color-cream);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding-block: var(--space-md);
+    border-top: 1px solid #647569;
+    color: #d2dace;
+    font-size: 0.65rem;
+}
+
+/* Tablet: flere kolonner og vandret navigation. */
+@media (min-width: 40rem) {
+    .container {
+        width: min(calc(100% - 4rem), var(--container-width));
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        column-gap: var(--space-md);
+    }
+
+    .navigation-visit {
+        padding-inline: var(--space-sm);
+        border: 1px solid var(--color-green);
+        border-radius: 0.3rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-md);
+    }
+
+    .gallery-item img {
+        aspect-ratio: 7 / 9;
+    }
+
+    .gallery-item:nth-child(2) {
+        margin-top: var(--space-lg);
+    }
+
+    .contact-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: var(--space-lg);
+    }
+
+    .contact-note {
+        grid-column: 1 / -1;
+    }
+
+    .footer-main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-note span {
+        display: inline;
+        margin-left: var(--space-sm);
+    }
+}
+
+/* Desktop: store billedfelter og tre kolonner til menu og anmeldelser. */
+@media (min-width: 60rem) {
+    .header-content {
+        padding-block: var(--space-lg);
+    }
+
+    .navigation {
+        column-gap: var(--space-lg);
+    }
+
+    .hero {
+        grid-template-columns: 1.1fr 1fr;
+    }
+
+    .hero-content {
+        padding-block: var(--space-lg);
+    }
+
+    .hero-visual {
+        padding-left: var(--space-sm);
+    }
+
+    .hero-image {
+        border-radius: 12rem 12rem var(--radius-lg) var(--radius-lg);
+    }
+
+    .hero-stamp {
+        right: auto;
+        left: -1.5rem;
+        bottom: 3.5rem;
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-content {
+        max-width: 29rem;
+    }
+
+    .menu-heading, .gallery-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: var(--space-lg);
+    }
+
+    .menu-heading > p, .gallery-heading > p {
+        max-width: 22rem;
+        font-size: 0.85rem;
+    }
+
+    .menu-grid, .reasons-grid, .reviews-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .reasons-grid {
+        gap: var(--space-xl);
+    }
+
+    .contact {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+        align-items: center;
+    }
+
+    .contact-details {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--space-lg);
+    }
+}
+
+/* Respektér brugerens ønske om reduceret bevægelse. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .button {
+        transition: none;
+    }
+}
