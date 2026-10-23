@@ -229,12 +229,13 @@ img {
     letter-spacing: 0.2em;
 }
 
-.navigation {
+.navigation ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: var(--space-sm);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation a {
