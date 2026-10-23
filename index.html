@@ -22,6 +22,84 @@
     <meta name="theme-color" content="#293f34">
     <title>Nico’s Kaffebar · God kaffe. Gode stunder.</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://mav014.github.io/Nicos-kaffebar/#organization",
+                    "name": "Nico’s Kaffebar",
+                    "url": "https://mav014.github.io/Nicos-kaffebar/"
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://mav014.github.io/Nicos-kaffebar/#website",
+                    "url": "https://mav014.github.io/Nicos-kaffebar/",
+                    "name": "Nico’s Kaffebar",
+                    "inLanguage": "da",
+                    "publisher": {
+                        "@id": "https://mav014.github.io/Nicos-kaffebar/#organization"
+                    }
+                },
+                {
+                    "@type": ["WebPage", "FAQPage"],
+                    "@id": "https://mav014.github.io/Nicos-kaffebar/#webpage",
+                    "url": "https://mav014.github.io/Nicos-kaffebar/",
+                    "name": "Nico’s Kaffebar · God kaffe. Gode stunder.",
+                    "description": "Præsentationsside for Nico’s Kaffebar med menu, åbningstider og ofte stillede spørgsmål.",
+                    "inLanguage": "da",
+                    "isPartOf": {
+                        "@id": "https://mav014.github.io/Nicos-kaffebar/#website"
+                    },
+                    "about": {
+                        "@id": "https://mav014.github.io/Nicos-kaffebar/#organization"
+                    },
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Kan jeg få havredrik i min kaffe?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ja, du kan vælge havredrik i din kaffe for 5 kr. ekstra."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Kan jeg sidde med min computer hos jer?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Ja, vi har gratis wi-fi og pladser med stikkontakter."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Hvornår har I åbent i weekenden?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Vi har åbent lørdag kl. 9–17 og søndag kl. 9–16."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "Offer",
+                    "@id": "https://mav014.github.io/Nicos-kaffebar/#cappuccino-offer",
+                    "url": "https://mav014.github.io/Nicos-kaffebar/#menu",
+                    "price": "40.00",
+                    "priceCurrency": "DKK",
+                    "seller": {
+                        "@id": "https://mav014.github.io/Nicos-kaffebar/#organization"
+                    },
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "Cappuccino",
+                        "description": "Espresso og silkeblødt mælkeskum i en varm, rund balance."
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#hovedindhold">Spring til indhold</a>
@@ -134,6 +212,22 @@
                 </article>
             </div>
             <p class="menu-note">Din kaffe, på din måde. Vælg havredrik for +5 kr. <span>Spørg os gerne om allergener.</span></p>
+        </section>
+        <section class="coffee-guide section-space container"
+                 aria-labelledby="guide-heading">
+            <h2 id="guide-heading">Find din næste favoritkaffe</h2>
+            <p>Er du i tvivl om, hvad du skal vælge? Start her:</p>
+
+            <ul>
+                <li><strong>Espresso:</strong> Til dig, der ønsker en lille,
+                    intens kaffe uden mælk.</li>
+                <li><strong>Cappuccino:</strong> Til dig, der elsker
+                    varm kaffe med luftigt mælkeskum.</li>
+                <li><strong>Caffè latte:</strong> Til dig, der foretrækker
+                    en mildere kaffesmag og masser af varm mælk.</li>
+                <li><strong>Islatte:</strong> Til dig, der vil have
+                    en kold kaffe med mælk og is.</li>
+            </ul>
         </section>
 
         <!-- Tre grunde til at vælge Nico’s -->

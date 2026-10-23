@@ -818,3 +818,41 @@ img {
         transition: none;
     }
 }
+.faq {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.faq h2 {
+    color: #293f34;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.faq h3 {
+    color: #293f34;
+    font-size: 20px;
+    margin: 0 0 10px;
+    padding: 24px 0 0;
+    border-top: 1px solid #b8b9a6;
+}
+
+.faq p {
+    color: #3d342c;
+    line-height: 1.6;
+    margin: 0 0 24px;
+}
+.coffee-guide h2 {
+    color: #293f34;
+    margin-bottom: 20px;
+}
+
+.coffee-guide ul {
+    padding-left: 24px;
+    margin-top: 20px;
+}
+
+.coffee-guide li {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
